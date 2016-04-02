@@ -1,0 +1,40 @@
+{% extends "base.twig" %}
+
+{% block title %}Start Your Sync{% endblock %}
+
+{% block content %}
+<h1>Syncan Uploader</h1>
+<div>
+  <form method="POST" action="">
+    <label for="">Profile :
+      <select>
+        {% for profile in profileList %}
+        <option value="{{ loop.index }}">{{ profile }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <input name="profile-name" value="{{ profileSelected['name'] }}" />
+    <label for="">Security Code :
+      <input name="security-hash" value="{{ profileSelected['security-hash'] }}" />
+    </label>
+
+    <h2>Source Database</h2>
+    <input name="database-name" value="{{ profileSelected['db-name'] }}" />
+    <input name="database-user" value="{{ profileSelected['db-user'] }}" />
+    <input type="password" name="database-passwd" value="{{ profileSelected['db-password'] }}" />
+
+    <h2>Destination Database</h2>
+    <input name="database-name" value="{{ profileSelected['db-name'] }}" />
+    <input name="database-user" value="{{ profileSelected['db-user'] }}" />
+    <input type="password" name="database-passwd" value="{{ profileSelected['db-password'] }}" />
+
+    <input type="submit" value="Synchronize" />
+  </form>
+</div>
+{% endblock %}
+
+{% block head_script %}
+{% endblock %}
+
+{% block body_script %}
+{% endblock %}

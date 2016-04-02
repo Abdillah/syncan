@@ -1,0 +1,20 @@
+{
+  "name": "syncan",
+  "version": "1.0.0",
+  "description": "MySQL Dump Uploader Interface",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mysqldump",
+    "upload"
+  ],
+  "author": "Hernawan Fa'iz Abdillah",
+  "license": "GPL-3.0"
+}
